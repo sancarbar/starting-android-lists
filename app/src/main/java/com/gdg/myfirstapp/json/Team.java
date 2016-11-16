@@ -17,6 +17,10 @@ public class Team
 
     private String imageUrl;
 
+    public Team()
+    {
+    }
+
     public Team( JSONObject jsonObject )
     {
         try

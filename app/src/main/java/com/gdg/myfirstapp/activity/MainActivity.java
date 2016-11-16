@@ -6,11 +6,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.gdg.myfirstapp.R;
 import com.gdg.myfirstapp.adapter.TeamsAdapter;
 import com.gdg.myfirstapp.json.Team;
 import com.gdg.myfirstapp.network.Network;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -39,15 +41,22 @@ public class MainActivity
             @Override
             public void run()
             {
-                teams = network.getTeamsFromUrl( Network.TEAMS_URL );
-                runOnUiThread( new Runnable()
+                try
                 {
-                    @Override
-                    public void run()
+                    teams = network.getTeams();
+                    runOnUiThread( new Runnable()
                     {
-                        recyclerView.setAdapter( new TeamsAdapter( teams ) );
-                    }
-                } );
+                        @Override
+                        public void run()
+                        {
+                            recyclerView.setAdapter( new TeamsAdapter( teams ) );
+                        }
+                    } );
+                }
+                catch ( IOException e )
+                {
+                    e.printStackTrace();
+                }
             }
         } );
 
