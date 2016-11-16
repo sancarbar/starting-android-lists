@@ -24,7 +24,7 @@ public class Team
             id = jsonObject.getInt( "id" );
             name = jsonObject.getString( "name" );
             shortName = jsonObject.getString( "shortName" );
-            imageUrl = jsonObject.getString( "crestUrl" );
+            imageUrl = jsonObject.getString( "imageUrl" );
         }
         catch ( JSONException e )
         {

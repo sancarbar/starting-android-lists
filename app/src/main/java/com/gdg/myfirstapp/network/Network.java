@@ -17,7 +17,7 @@ import java.util.List;
 public class Network
 {
 
-    public static final String TEAMS_URL = "http://gabobernal.com/demos/football/teams.json";
+    public static final String TEAMS_URL = "https://raw.githubusercontent.com/sancarbar/starting-android-lists/master/teams.json";
 
     public List<Team> getTeamsFromUrl( String serverUrl )
     {
