@@ -1,14 +1,16 @@
 package com.gdg.myfirstapp.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.gdg.myfirstapp.R;
 import com.gdg.myfirstapp.json.Team;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -20,6 +22,7 @@ public class TeamsAdapter
 {
     private final List<Team> teams;
 
+    private Context context;
 
     public TeamsAdapter( List<Team> teams )
     {
@@ -29,7 +32,8 @@ public class TeamsAdapter
     @Override
     public ViewHolder onCreateViewHolder( ViewGroup viewGroup, int i )
     {
-        View view = LayoutInflater.from( viewGroup.getContext() ).inflate( R.layout.team_row, viewGroup, false );
+        context = viewGroup.getContext();
+        View view = LayoutInflater.from( context ).inflate( R.layout.team_row, viewGroup, false );
         return new ViewHolder( view );
     }
 
@@ -39,7 +43,7 @@ public class TeamsAdapter
         Team team = teams.get( position );
         viewHolder.name.setText( team.getName() );
         viewHolder.shortName.setText( team.getShortName() );
-        ImageLoader.getInstance().displayImage( team.getImageUrl(), viewHolder.logo );
+        Picasso.with( context ).load( team.getImageUrl() ).into( viewHolder.logo );
     }
 
     @Override
