@@ -28,4 +28,39 @@
 	"name": "SV Darmstadt 98",
 	"shortName": "Darmstadt",
 	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Darmstadt_98_football_club_new_logo_2015.png/300px-Darmstadt_98_football_club_new_logo_2015.png"
+}, {
+	"id": 7,
+	"name": "Eintracht Frankfurt",
+	"shortName": "Frankfurt",
+	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Eintracht_Frankfurt_Logo.svg/300px-Eintracht_Frankfurt_Logo.svg.png"
+}, {
+	"id": 8,
+	"name": "Hamburger SV",
+	"shortName": "HSV",
+	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/HSV-Logo.svg/300px-HSV-Logo.svg.png"
+}, {
+	"id": 9,
+	"name": "Hertha BSC",
+	"shortName": "Hertha",
+	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hertha_BSC_Logo_2012.svg/300px-Hertha_BSC_Logo_2012.svg.png"
+}, {
+	"id": 10,
+	"name": "TSG 1899 Hoffenheim",
+	"shortName": "TSG",
+	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/TSG_Logo-Standard_4c.png/251px-TSG_Logo-Standard_4c.png"
+}, {
+	"id": 11,
+	"name": "FC Schalke 04",
+	"shortName": "S04",
+	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/FC_Schalke_04_Logo.svg/300px-FC_Schalke_04_Logo.svg.png"
+}, {
+	"id": 12,
+	"name": "SV Werder Bremen",
+	"shortName": "Werder Bremen",
+	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/SV-Werder-Bremen-Logo.svg/199px-SV-Werder-Bremen-Logo.svg.png"
+}, {
+	"id": 13,
+	"name": "VfL Wolfsburg",
+	"shortName": "VfL",
+	"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Logo-VfL-Wolfsburg.svg/300px-Logo-VfL-Wolfsburg.svg.png"
 }]
