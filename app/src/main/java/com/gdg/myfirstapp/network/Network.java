@@ -25,8 +25,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Network
 {
 
-    public static final String TEAMS_URL =
-        "https://raw.githubusercontent.com/sancarbar/starting-android-lists/master/teams.json";
+    private final TeamsService service;
+
+    public Network()
+    {
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(
+            "https://raw.githubusercontent.com/sancarbar/starting-android-lists/master/" ).
+            addConverterFactory(GsonConverterFactory.create() ).build();
+        service = retrofit.create( TeamsService.class );
+    }
 
     public List<Team> getTeamsFromUrl( String serverUrl )
     {
@@ -65,10 +72,6 @@ public class Network
     public List<Team> getTeams()
         throws IOException
     {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(
-            "https://raw.githubusercontent.com/sancarbar/starting-android-lists/master/" ).addConverterFactory(
-            GsonConverterFactory.create() ).build();
-        TeamsService service = retrofit.create( TeamsService.class );
         Call<List<Team>> call = service.listTeams();
         Response<List<Team>> response = call.execute();
         return response.body();

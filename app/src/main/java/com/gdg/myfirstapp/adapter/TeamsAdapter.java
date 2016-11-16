@@ -52,7 +52,7 @@ public class TeamsAdapter
         return teams.size();
     }
 
-    public static class ViewHolder
+    static class ViewHolder
         extends RecyclerView.ViewHolder
     {
 
@@ -62,7 +62,7 @@ public class TeamsAdapter
 
         ImageView logo;
 
-        public ViewHolder( View view )
+        ViewHolder( View view )
         {
             super( view );
             name = (TextView) view.findViewById( R.id.name );

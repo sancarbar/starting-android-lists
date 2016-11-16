@@ -36,6 +36,15 @@ public class MainActivity
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
         configureRecyclerView();
+
+        try
+        {
+            teams = network.getTeams();
+        }
+        catch ( IOException e )
+        {
+            e.printStackTrace();
+        }
         executorService.execute( new Runnable()
         {
             @Override
